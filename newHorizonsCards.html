@@ -1,0 +1,286 @@
+<style>
+  /* style for the enclosing container that contains the cards */
+  #container {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* style for the card itself */
+  /* cards are of fixed width and height */
+  .outer {
+    width: 300px;
+    border-radius: 30px;
+    background-color: #ccffff;
+    border-style: solid;
+    border-color: #000033;
+    border-width: 5px;
+    margin: 20px;
+    height: 520px;
+    position: relative;
+  }
+
+  /* div that contains the image as a background */
+  .imageDiv {
+    height: 300px;
+    padding: 0px;
+    width: 100.5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px 25px 0px 0px;
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+
+  /* each card is accessed by ID an set with its corresponding image */
+
+  #sample {
+    background-image: url("https://alberta.college/wp-content/uploads/2022/07/Fraud-Samples.jpg");
+  }
+
+  #antifraud {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Canadian-Anti-Fraud.jpg);
+  }
+
+  #yellowPages {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/YellowPages.jpg);
+  }
+
+  #older {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Fraud-and-Scam-PDF.jpg);
+  }
+
+  #protection {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Fraud-Protection.jpg);
+  }
+
+  #pwned {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Pwned.jpg);
+  }
+
+  #cyber {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Cybersafe.jpg);
+  }
+
+  #article {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Fake-Interac.jpg);
+  }
+
+  #additional {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Fake-Interac-2.jpg);
+  }
+
+  #shop {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Safer-Online-Shopping.jpg);
+  }
+
+  #shopping {
+    background-image: url(https://alberta.college/wp-content/uploads/2022/07/Tips-for-Online-Shopping.jpg);
+  }
+
+  /* paragraph text that says "click here to access" */
+  .clickHere {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: -20px;
+    padding: 10px;
+    color: #000033;
+  }
+
+  /* main title of the card */
+  .mainTitle {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    color: #000033;
+  }
+
+  /* click here icon that sits at the bottom-right corner of the card */
+  /* the positioning must be changed using the top and left attributes if the height or width of the card changes */
+  .clickerIcon {
+    position: absolute;
+    top: 475px;
+    left: 255px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+</style>
+
+<!-- All of the cards are enclosed in the container div -->
+<div id="container">
+  <!-- All the cards below follow the same structure -->
+  <!-- The entire card is wrapped in a link to the corresponding page -->
+  <a
+    href="https://www.canada.ca/en/revenue-agency/corporate/security/protect-yourself-against-fraud/scam-alerts/samples-fraudulent-online-refund-forms.html "
+    target="_blank"
+  >
+    <!-- the "outer" div encloses an individual card -->
+    <div class="outer">
+      <!-- the "imageDiv" is a div that contains an image. -->
+      <!-- For formatting reasons, we are using a div with an image background instead of an image tag-->
+      <div id="sample" class="imageDiv"></div>
+      <!-- Click here text -->
+      <p class="clickHere">Click here to access:</p>
+      <!-- Main title of the card -->
+      <h2 class="mainTitle">Examples of Fraudulent Messages (CRA)</h2>
+      <!-- Cursor click icon that sits at the bottom-right of the card -->
+      <!-- The source should NOT be changed along with the other content if new cards are added -->
+      <!-- because relative positioning is being used, the style will have to be upated if the height of the card is changed-->
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <!-- new card starts here -->
+  <a
+    href="https://www.antifraudcentre-centreantifraude.ca/scams-fraudes/victim-victime-eng.htm "
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="antifraud" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">The Canadian <br />Anti-Fraud Centre</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a href="https://www.canada411.ca/search/reverse.html" target="_blank">
+    <div class="outer">
+      <div id="yellowPages" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Yellow Pages Reverse Phone Lookup</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://www.canada.ca/content/dam/esdc-edsc/documents/corporate/seniors/forum/brochure-08-eng.pdf "
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="older" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">
+        What every older Canadian should know about: Fraud and Scams (PDF)
+      </h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://www.cpacanada.ca/en/public-interest/financial-literacy/financial-literacy-education/request-a-session-in-your-community/seniors-sessions/fraud-protection-for-seniors"
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="protection" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">
+        Fraud protection for seniors Information from CRA Canada
+      </h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a href="https://haveibeenpwned.com/" target="_blank">
+    <div class="outer">
+      <div id="pwned" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Pwned email</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a href="https://www.getcybersafe.gc.ca/en" target="_blank">
+    <div class="outer">
+      <div id="cyber" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Get Cybersafe Canada</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://fcnb.ca/en/news-alerts/fraud-alert-fake-interac-e-transfer-notifications#:~:text=Fake%20Interac%20e%2DTransfer%20notifications%20may%20include%20one%20or%20more,has%20attachments%2C%20it%20is%20fraudulent"
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="article" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Information on Email Fraud from Interac</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://www.interac.ca/en/content/life/email-fraud-how-to-recognize-it-and-how-to-protect-yourself/"
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="additional" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">
+        Examples of Fake Interac e-Transfer Notifications
+      </h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://www.microsoft.com/en-us/windows/remote-resource-center/guide-to-smarter-and-safer-shopping-online?ocid=FY22_JAN_XSTORY_INP_SPOT_2_SmartShop&form=M402BG&r=1"
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="shop" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Guide to Smarter and Safer Shopping Online</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+
+  <a
+    href="https://www.safewise.com/blog/10-cybersecurity-tips-for-online-shopping/"
+    target="_blank"
+  >
+    <div class="outer">
+      <div id="shopping" class="imageDiv"></div>
+      <p class="clickHere">Click here to access:</p>
+      <h2 class="mainTitle">Information for Safe Online Shopping</h2>
+      <img
+        src="https://alberta.college/wp-content/uploads/2022/07/Mouse-Icon-1.png"
+        class="clickerIcon"
+      />
+    </div>
+  </a>
+</div>
