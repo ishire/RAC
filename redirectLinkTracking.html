@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- replace the URL with the specific skillsbuild page-->
+    <meta http-equiv="refresh" content="0; URL=https://skillsbuild.org/" />
+    <title>redirecting...</title>
+  </head>
+  <!--TODO: remove the header and footer form the wordpress page to improve redirect speed-->
+  <body>
+    <script>
+      //TODO: instead of saving and taking from local storage, draw from database instead
+
+      //Get the previous log in JSON format
+      let accessLog = JSON.parse(localStorage.getItem("log"));
+      //Get the URL of the current website (used to fetch parameters)
+      let curURL = window.location.href;
+      //Get the URLSearchParams object associated with the URL parameters
+      let queries = new URLSearchParams(curURL.substring(curURL.indexOf("?")));
+
+      //prepare the new entry to the log with the token and date
+      let newVisit = {
+        token: queries.get("token"),
+        date: new Date().toLocaleString(),
+        //TODO: get the name associated with the token from the database to include in log
+        //if this storage is not secure, just store the token instead
+      };
+
+      //TODO: change below block to fetch from database
+
+      if (accessLog) {
+        //if there is an existing log, append the new entry to it
+        accessLog.push(newVisit);
+      } else {
+        //otherwise, create a new log with the new entry as the first item
+        accessLog = [newVisit];
+      }
+
+      //put the new information back into the database
+      localStorage.setItem("log", JSON.stringify(accessLog));
+    </script>
+    <p>redirecting...</p>
+  </body>
+</html>
